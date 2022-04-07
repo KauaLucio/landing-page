@@ -1,6 +1,7 @@
+const withTM = require('next-transpile-modules')(['@loomhq/lens'])
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: true
 }
 
-module.exports = nextConfig
+module.exports = withTM({ nextConfig })
