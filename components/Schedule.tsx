@@ -4,8 +4,8 @@ import scheduleImg from '../public/assets/images/schedule.svg'
 
 export default function Schedule() {
   return (
-    <div className="p-11 flex md:justify-between md:flex-row xxxs:flex-col gap-3">
-        <div className="w-1/2">
+    <div className="md:p-11 xxxs:p-5 flex md:justify-between md:flex-row xxxs:flex-col gap-3">
+        <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-3">Estabelecendo presença online</h2>
           <div className="text-sm text-[#292525] flex flex-col gap-3">
             <p>
@@ -25,7 +25,7 @@ export default function Schedule() {
             </p>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="md:w-1/2">
           <h2 className="text-2xl font-medium mb-3 text-[#60E1CB]">Agende uma sessão grátis</h2>
           <Image src={scheduleImg} alt="Agenda" />
         </div>

@@ -5,18 +5,16 @@ import React from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
 export default function Navbar() {
-  const [menuIcon, setMenuIcon] = useState(true)
+  const [menuIconActive, setmenuIconActive] = useState(true)
   const navLinksRef = useRef<HTMLDivElement>(null);
 
-  const handleOpenMenu = () => {
-    setMenuIcon(!menuIcon)
-    
-    if(menuIcon) {
+  useEffect(() => {
+    if(!menuIconActive) {
       navLinksRef.current?.classList.add('show-menu-mobile')
     }else {
       navLinksRef.current?.classList.remove('show-menu-mobile')
     }
-  }
+   }, [menuIconActive])
 
   useEffect(() => {
    navLinksRef.current?.classList.remove('show-menu-mobile')
@@ -28,15 +26,22 @@ export default function Navbar() {
         navLinksRef.current?.classList.remove('show-menu-mobile')
       }
     })
+
+      document.querySelector('body')?.addEventListener('load', () => {
+        document.querySelector('#nav-links')?.classList.remove('show-menu-mobile')
+        console.log(document.querySelector('#nav-links'))
+        // navLinksRef.current?.classList.remove('show-menu-mobile')
+        console.log('olá')
+      })
   }
 
 
   return (
     <nav>
-      <div onClick={handleOpenMenu} className={`relative z-30 toggle icon-menu`}>{menuIcon ? <FaBars /> : <FaTimes/>}</div>
+      <div onClick={() => setmenuIconActive(!menuIconActive)} className={`relative z-30 toggle icon-menu`}>{menuIconActive ? <FaBars /> : <FaTimes/>}</div>
       {/* <div ref={menuCloseIconRef} className="toggle close"><FaTimes/></div> */}
-      <div ref={navLinksRef} id="nav-links" className="flex items-center lg:gap-5 xl:gap-5 md:gap-3 sm:gap-2 text-[#60E1CB] font-medium">  
-        <Link passHref href="/"><span>Home</span></Link>
+      <div ref={navLinksRef} id="nav-links" className="relative z-30 flex items-center lg:gap-5 xl:gap-5 md:gap-2 sm:gap-1 text-[#60E1CB] font-medium">  
+        <Link passHref href="/" ><span>Home</span></Link>
         <Link passHref href="/services"><span>Serviços</span></Link>
         <Link passHref href="/testimonials"><span>Testemunhos</span></Link>
         <Link passHref href="/team"><span>Time</span></Link>

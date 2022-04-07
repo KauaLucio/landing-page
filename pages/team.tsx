@@ -8,7 +8,7 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 export default function Team() {
   return (
-    <div>
+    <div className="relative z-10">
       <div className="relative flex items-center justify-center z-30 pt-10 pb-10 xxxs:px-3 md:px-0">
         <div className="absolute w-full h-full -z-10">
           <Image 

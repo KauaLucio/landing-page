@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="relative pt-5 pb-9">
       <div className="absolute bottom-[10px] left-[-3%] lg:w-[500px] xl:w-[500px] md:w-[300px] sm:w-[300px] lg:h-[500px] xl:h-[500px] md:h-[300px] sm:h-[350px]"><Image src={circlesImg} alt="Circulos de rodapé" width="500px" height="530px" /></div>      
-      <div className="container md:px-6 mx-auto flex items-center justify-center">
+      <div className="container xxxs:px-3 md:px-6 mx-auto flex items-center justify-center">
         <div className="relative">
           <span className="absolute xl:top-[-25px] lg:top-[-25px] md:top-[-15px] sm:top-[-15px] xs:top-[-15px] xxxs:top-[-15px] left-0 w-[120px] h-[4px] bg-[#60E1CB]"></span>
           <h2 className="text-5xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl xxxs:text-3xl font-bold mb-3">

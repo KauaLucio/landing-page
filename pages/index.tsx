@@ -1,4 +1,3 @@
-import '../styles/Testimonials.module.css';
 import type { NextPage } from 'next'
 
 import HomeComponent from '../components/Home'
