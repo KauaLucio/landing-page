@@ -27,12 +27,6 @@ export default function Navbar() {
       }
     })
 
-      document.querySelector('body')?.addEventListener('load', () => {
-        document.querySelector('#nav-links')?.classList.remove('show-menu-mobile')
-        console.log(document.querySelector('#nav-links'))
-        // navLinksRef.current?.classList.remove('show-menu-mobile')
-        console.log('olá')
-      })
   }
 
 
